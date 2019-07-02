@@ -1,0 +1,7 @@
+src/dmenu
+src/dmenu_path
+src/dmenu_run
+src/*.o
+src/*.def*
+src/*.orig
+src/*.rej
