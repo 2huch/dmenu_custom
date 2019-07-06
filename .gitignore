@@ -1,6 +1,7 @@
 src/dmenu
 src/dmenu_path
 src/dmenu_run
+src/stest
 src/*.o
 src/*.def*
 src/*.orig
