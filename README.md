@@ -1,3 +1,18 @@
+# dmenu a bit modified
+
+added `-bo` and `-c` in addition of the following patches :  
+
++ center (modified to add option)
++ border (modified to add option)
++ fuzzymatch
++ lineheight
++ xyz
+
+-bo require a value, -c is a standalone arg.
+
+## original README :
+
+```
 dmenu - dynamic menu
 ====================
 dmenu is an efficient dynamic menu for X.
@@ -22,3 +37,4 @@ Afterwards enter the following command to build and install dmenu
 Running dmenu
 -------------
 See the man page for details.
+```
