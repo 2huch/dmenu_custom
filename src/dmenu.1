@@ -3,7 +3,7 @@
 dmenu \- dynamic menu
 .SH SYNOPSIS
 .B dmenu
-.RB [ \-bfinv ]
+.RB [ \-bfinvc ]
 .RB [ \-l
 .IR lines ]
 .RB [ \-m
@@ -22,6 +22,8 @@ dmenu \- dynamic menu
 .IR color ]
 .RB [ \-w
 .IR windowid ]
+.RB [ \-bo
+.IR border_width ]
 .P
 .BR dmenu_run " ..."
 .SH DESCRIPTION
@@ -51,7 +53,10 @@ dmenu matches menu items case insensitively.
 dmenu instantly selects if only one match.
 .TP
 .B \-c
-dmenu centers in the middle of the screen
+dmenu centers in the middle of the screen.
+.TP
+.BI \-bo " border_width"
+defines the border width, 0 by default.
 .TP
 .BI \-x " xoffset"
 dmenu is placed at this offset measured from the left side of the monitor.
