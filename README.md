@@ -8,7 +8,7 @@ added `-bo` and `-c` in addition of the following patches :
 + lineheight
 + xyz
 
--bo require a value, -c is a standalone arg.
+`-bo` require a value that sets the border width, `-c` is a standalone arg that centers dmenu.
 
 ## original README :
 
