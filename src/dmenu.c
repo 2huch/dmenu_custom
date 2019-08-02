@@ -747,9 +747,9 @@ setup(void)
 				if (INTERSECT(x, y, 1, 1, info[i]))
 					break;
 
-		mw = (dmw>0 ? dmw : (mid>0 ? MIN(MAX(max_textw() + promptw, 100), info[i].width) : info[i].width));
-		x = (mid>0 ? info[i].x_org + ((info[i].width  - mw) / 2) : info[i].x_org + dmx);
-		y = (mid>0 ? info[i].y_org + ((info[i].height - mh) / 2) : (info[i].y_org + (topbar ? dmy : info[i].height - mh - dmy)));
+		mw = (dmw>0 ? dmw : (mid>0 ? MIN(MAX(max_textw() + promptw, 100), info[i].width) : info[i].width - (2 * border_width)));
+		x = (mid>0 ? info[i].x_org + ((info[i].width  - (mw + (2 * border_width))) / 2) : info[i].x_org + dmx);
+		y = (mid>0 ? info[i].y_org + ((info[i].height - (mh + (2 * border_width))) / 2) : (info[i].y_org + (topbar ? dmy : info[i].height - (mh + (2 * border_width)) - dmy)));
 		XFree(info);
 	} else
 #endif
@@ -757,9 +757,9 @@ setup(void)
 		if (!XGetWindowAttributes(dpy, parentwin, &wa))
 			die("could not get embedding window attributes: 0x%lx",
 			    parentwin);
-		mw = (dmw>0 ? dmw : (mid>0 ? MIN(MAX(max_textw() + promptw, 100), wa.width) : wa.width));
-		x = (mid>0 ? (wa.width  - mw) / 2 : dmx);
-		y = (mid>0 ? (wa.height - mh) / 2 : (topbar ? dmy : wa.height - mh - dmy));
+		mw = (dmw>0 ? dmw : (mid>0 ? MIN(MAX(max_textw() + promptw, 100), wa.width) : wa.width - (2 * border_width)));
+		x = (mid>0 ? (wa.width  - (mw + (2 * border_width))) / 2 : dmx);
+		y = (mid>0 ? (wa.height - (mh + (2 * border_width))) / 2 : (topbar ? dmy : wa.height - (mh + (2 * border_width)) - dmy));
 	}
 	inputw = MIN(inputw, mw/3);
 	match();
