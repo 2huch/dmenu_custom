@@ -8,7 +8,9 @@ added `-bo` and `-c` in addition of the following patches :
 + lineheight
 + xyz
 
-`-bo` require a value that sets the border width, `-c` is a standalone arg that centers dmenu.
+`-bo` require a value that sets the border width, `-c` is a standalone arg that centers dmenu.  
+
+borders are supported even in "docked" mode (the default positionning method)
 
 ## original README :
 
